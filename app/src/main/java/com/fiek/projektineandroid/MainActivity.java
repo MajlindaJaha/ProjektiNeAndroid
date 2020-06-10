@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     private Button button;
-
+    private Button button1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,8 +23,21 @@ public class MainActivity extends AppCompatActivity {
                 openRegjistrimi();
             }
         });
+
+        button1 = (Button) findViewById(R.id.btnLuaj);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openLuaj();
+            }
+        });
     }
     public void openRegjistrimi(){
+        Intent intent = new Intent(this, Regjistrimi.class);
+        startActivity(intent);
+    }
+
+    public void openLuaj(){
         Intent intent = new Intent(this, Regjistrimi.class);
         startActivity(intent);
     }

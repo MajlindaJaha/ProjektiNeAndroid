@@ -73,7 +73,7 @@
         android:text="Shkruani emrin" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnLuaj"
         android:layout_width="158dp"
         android:layout_height="79dp"
         android:layout_alignParentEnd="true"
