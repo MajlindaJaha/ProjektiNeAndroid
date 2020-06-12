@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Loja extends AppCompatActivity implements View.OnClickListener{
 
@@ -74,7 +75,7 @@ public class Loja extends AppCompatActivity implements View.OnClickListener{
                 lojtari2Fiton();
             }
         } else if (numeroRundat == 9) {
-            barazim();
+            nukKaFitues();
         } else {
             lojtari1Radhen = !lojtari1Radhen;
         }
@@ -123,8 +124,35 @@ public class Loja extends AppCompatActivity implements View.OnClickListener{
 
     }
 
-    private void lojtari1Fiton() {}
-    private void lojtari2Fiton() {}
-    private void barazim() {}
+    private void lojtari1Fiton() {
+       lojtari1Piket++;
+        Toast.makeText(this, "Lojtari i pare fiton!",Toast.LENGTH_SHORT).show();
+        nderroNumrinPikeve();
+        resetoTabelen();
+    }
+    private void lojtari2Fiton() {
+        lojtari2Piket++;
+        Toast.makeText(this, "Lojtari i dyte fiton!",Toast.LENGTH_SHORT).show();
+        nderroNumrinPikeve();
+        resetoTabelen();
+    }
+    private void nukKaFitues() {
+        Toast.makeText(this,"Nuk ka Fitues!", Toast.LENGTH_SHORT ).show();
+        resetoTabelen();
+    }
+    private void nderroNumrinPikeve(){
+        textViewLojtari1.setText("Lojtari 1 : " + lojtari1Piket);
+        textViewLojtari2.setText("Lojtari 2 : "+lojtari2Piket);
+    }
+    private void resetoTabelen(){
+        for(int i=0;i<3;i++){
+            for(int j=0;j<3;j++){
+                buttons[i][j].setText("");
+            }
+        }
+        numeroRundat = 0;
+        lojtari1Radhen = true;
+    }
+
 
 }
