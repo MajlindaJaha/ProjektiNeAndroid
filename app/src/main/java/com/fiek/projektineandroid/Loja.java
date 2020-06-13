@@ -1,5 +1,6 @@
 package com.fiek.projektineandroid;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -44,6 +45,7 @@ public class Loja extends AppCompatActivity implements View.OnClickListener{
         buttonReset.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                resetoLojen();
 
             }
         });
@@ -154,5 +156,30 @@ public class Loja extends AppCompatActivity implements View.OnClickListener{
         lojtari1Radhen = true;
     }
 
+    private void resetoLojen() {
+        lojtari1Piket = 0;
+        lojtari2Piket = 0;
+        nderroNumrinPikeve();
+        resetoTabelen();
+    }
 
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putInt("numeroRundat", numeroRundat);
+        outState.putInt("lojtari1Piket",lojtari1Piket);
+        outState.putInt("lojtari2Piket",lojtari2Piket);
+        outState.putBoolean("lojtari1Radhen",lojtari1Radhen);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        numeroRundat = savedInstanceState.getInt("numeroRundat");
+        lojtari1Piket = savedInstanceState.getInt("lojtari1Piket");
+        lojtari2Piket = savedInstanceState.getInt("lojtari2Piket");
+        lojtari1Radhen = savedInstanceState.getBoolean("lojtari1Radhen");
+    }
 }
