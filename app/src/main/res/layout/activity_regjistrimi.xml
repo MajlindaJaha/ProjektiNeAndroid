@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="@drawable/background"
     android:layout_height="match_parent"
     tools:context=".Regjistrimi">
-
 
     <EditText
         android:id="@+id/editText2"
@@ -17,11 +15,11 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="101dp"
-        android:layout_marginLeft="101dp"
-        android:layout_marginEnd="96dp"
-        android:layout_marginRight="96dp"
-        android:layout_marginBottom="432dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginEnd="91dp"
+        android:layout_marginRight="91dp"
+        android:layout_marginBottom="258dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="shkruani emrin" />
@@ -38,10 +36,10 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="100dp"
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="194dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginRight="76dp"
-        android:layout_marginBottom="484dp"
+        android:layout_marginTop="366dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginRight="69dp"
+        android:layout_marginBottom="312dp"
         android:text="Lojtari 2"
         android:textSize="26sp" />
 
@@ -57,10 +55,10 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="100dp"
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="89dp"
+        android:layout_marginTop="83dp"
         android:layout_marginEnd="76dp"
         android:layout_marginRight="76dp"
-        android:layout_marginBottom="597dp"
+        android:layout_marginBottom="603dp"
         android:text="Lojtari 1"
         android:textSize="26sp" />
 
@@ -89,9 +87,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginBottom="303dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginRight="39dp"
+        android:layout_marginBottom="129dp"
         android:background="@drawable/luajbackground"
         android:text="Luaj"
         android:textSize="20sp" />
