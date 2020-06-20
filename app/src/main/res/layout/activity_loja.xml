@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Loja">
+    tools:context=".Loja"
+    android:background="@drawable/luajbackground">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -33,7 +34,8 @@
             android:layout_marginEnd='33dp'
             android:text = "Fillo loje te re"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="33dp" />
+            android:layout_marginRight="33dp"
+            android:background="@android:color/holo_blue_dark"/>
 
     </RelativeLayout>
     <LinearLayout
@@ -46,21 +48,24 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:textSize="60sp"
-            android:freezesText="true"/>
+            android:freezesText="true"
+            android:background="@android:drawable/alert_light_frame"/>
         <Button
             android:id="@+id/btn_01"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:textSize="60sp"
-            android:freezesText="true"/>
+            android:freezesText="true"
+            android:background="@android:drawable/alert_light_frame"/>
         <Button
             android:id="@+id/btn_02"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:textSize="60sp"
-            android:freezesText="true"/>
+            android:freezesText="true"
+            android:background="@android:drawable/alert_light_frame"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -72,21 +77,24 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:textSize="60sp"
-            android:freezesText="true"/>
+            android:freezesText="true"
+            android:background="@android:drawable/alert_light_frame"/>
         <Button
             android:id="@+id/btn_11"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:textSize="60sp"
-            android:freezesText="true"/>
+            android:freezesText="true"
+            android:background="@android:drawable/alert_light_frame"/>
         <Button
             android:id="@+id/btn_12"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:textSize="60sp"
-            android:freezesText="true"/>
+            android:freezesText="true"
+            android:background="@android:drawable/alert_light_frame"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -98,21 +106,24 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:textSize="60sp"
-            android:freezesText="true"/>
+            android:freezesText="true"
+            android:background="@android:drawable/alert_light_frame"/>
         <Button
             android:id="@+id/btn_21"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:textSize="60sp"
-            android:freezesText="true"/>
+            android:freezesText="true"
+            android:background="@android:drawable/alert_light_frame"/>
         <Button
             android:id="@+id/btn_22"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:textSize="60sp"
-            android:freezesText="true"/>
+            android:freezesText="true"
+            android:background="@android:drawable/alert_light_frame"/>
     </LinearLayout>
 
 </LinearLayout>
