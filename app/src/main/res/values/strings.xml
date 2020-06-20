@@ -4,4 +4,8 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragmenti1">Fragmenti1</string>
+    <string name="fragmenti2">fragmenti2</string>
+    <string name="Fragmenti1">Fragmenti1</string>
+    <string name="Fragmenti2">Fragmenti2</string>
 </resources>
