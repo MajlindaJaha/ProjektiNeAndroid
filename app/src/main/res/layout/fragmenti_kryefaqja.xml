@@ -21,7 +21,7 @@
         android:layout_marginBottom="258dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="shkruani emrin"
+        android:hint="Shkruani emrin"
         android:textSize="20sp"
         />
 
@@ -79,7 +79,7 @@
         android:layout_marginBottom="422dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Shkruani emrin"
+        android:hint="Shkruani emrin"
         android:textSize="20sp"
         />
 
