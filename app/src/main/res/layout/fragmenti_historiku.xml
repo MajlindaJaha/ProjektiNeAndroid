@@ -5,4 +5,58 @@
     android:layout_height="match_parent"
     android:background="@drawable/kalter">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TicTacToe"
+        android:background="#18FFFF"
+        android:textColor="@android:color/white"
+        android:text="@string/Tic_Tac_Toe"
+        android:textSize="50sp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/historiku"
+        android:background="#BBDEFB"
+        android:layout_below="@+id/TicTacToe"
+        android:text="@string/historiku"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:gravity="center_horizontal" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/historiku"
+        >
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/paragrafi"
+                android:text="@string/paragrafi"
+                android:lineSpacingExtra="5sp"
+                android:textSize="15sp"
+                android:padding="@android:dimen/app_icon_size"
+                />
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
 </RelativeLayout>
