@@ -3,14 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/kalter"
+    android:background="@drawable/background"
     android:layout_above="@+id/btnAnime">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/TicTacToe"
-        android:background="#18FFFF"
         android:textColor="@android:color/white"
         android:text="@string/Tic_Tac_Toe"
         android:textSize="50sp"
@@ -22,12 +21,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/historiku"
-        android:background="#BBDEFB"
+        android:background="#fff"
         android:layout_below="@+id/TicTacToe"
         android:text="@string/historiku"
         android:textStyle="bold"
         android:textAlignment="center"
         android:textSize="30sp"
+        android:textColor="#032b5f"
         android:gravity="center_horizontal" />
 
     <RelativeLayout
@@ -46,6 +46,7 @@
                 android:lineSpacingExtra="5sp"
                 android:padding="@android:dimen/app_icon_size"
                 android:text="@string/paragrafi"
+                android:textColor="#fff"
                 android:textSize="13sp" />
 
         </ScrollView>
@@ -66,7 +67,8 @@
             android:layout_marginEnd="225dp"
             android:layout_marginRight="32dp"
             android:layout_marginBottom="10dp"
-            android:background="@android:color/holo_blue_dark"
+            android:textColor="#fff"
+            android:background="#032b5f"
             android:text="@string/ZmadhoTekstin" />
 
         <Button
@@ -84,8 +86,9 @@
             android:layout_marginTop="0dp"
             android:layout_marginEnd="50dp"
             android:layout_marginRight="32dp"
+            android:textColor="#fff"
             android:layout_marginBottom="10dp"
-            android:background="@android:color/holo_blue_dark"
+            android:background="#032b5f"
             android:text="@string/Mesazh" />
 
     </RelativeLayout>

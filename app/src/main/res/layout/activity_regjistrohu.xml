@@ -4,85 +4,98 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegjistrohuActivity">
+    tools:context=".RegjistrohuActivity"
+    android:orientation="vertical"
+    android:background="@drawable/background">
 
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
-        android:ems="10"
-        android:hint="Email"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#3fff"
+        android:padding="10dp"
+        android:gravity="center"
+        >
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REGISTER"
+            android:textSize="46dp"
+            android:textColor="#fff"
+            app:layout_constraintHorizontal_bias="0.476" />
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="100dp"
+            android:paddingLeft="15dp"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textPersonName"
+            android:background="@drawable/email"
+            android:textColor="#fff"
+            android:textColorHint="#fffbfb"
+            app:layout_constraintHorizontal_bias="0.484"/>
 
-    <Button
-        android:id="@+id/regjistrohuButton"
-        android:layout_width="207dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="20dp"
-        android:text="Regjistrohu"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.02" />
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="15dp"
+            android:ems="10"
+            android:hint="Password"
+            android:background="@drawable/email"
+            android:textColor="#fff"
+            android:textColorHint="#fffbfb"
+            android:inputType="textPassword"
+            app:layout_constraintHorizontal_bias="0.484" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="197dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="124dp"
-        android:text="Regjistrohu"
-        android:textSize="36sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/regjistrohuButton"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:text="SIGN UP"
+            android:background="@drawable/loginbtn"
+            android:shadowDx="0.2"
+            android:shadowDy="0.2"
+            android:shadowColor="#06558d"
+            android:textColor="#06558d"
+            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/loginlink"
-        android:layout_width="100dp"
-        android:layout_height="17dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="200dp"
-        android:text="LOGIN"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton"
-        app:layout_constraintVertical_bias="0.018" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#fff"
+            android:layout_marginTop="30dp" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="92dp"
-        android:layout_height="17dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginLeft="104dp"
-        android:layout_marginBottom="200dp"
-        android:text="Jeni i regjistruar?"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton"
-        app:layout_constraintVertical_bias="0.09" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="-35dp"
+            android:text="Jeni i regjistruar?"
+            android:textSize="14sp"
+            android:textColor="#fff"
+            app:layout_constraintVertical_bias="0.14" />
+
+        <TextView
+            android:id="@+id/loginlink"
+            android:layout_width="125dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="-16dp"
+            android:layout_marginLeft="90dp"
+            android:text=" LOGIN!"
+            android:textSize="14sp"
+            android:textColor="#06558d"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="0.018" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
