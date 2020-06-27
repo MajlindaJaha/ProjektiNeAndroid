@@ -3,6 +3,7 @@ package com.fiek.projektineandroid;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -41,6 +42,12 @@ public class Loja extends AppCompatActivity implements View.OnClickListener{
             }
         }
 
+        Intent intent = getIntent();
+         String strlojtari1 = intent.getStringExtra("lojtari1");
+         String strlojtari2 = intent.getStringExtra("lojtari2");
+
+        textViewLojtari1.setText(strlojtari1 + ": " + 0);
+        textViewLojtari2.setText(strlojtari2 + ": " + 0);
         Button buttonReset = findViewById(R.id.btn_reseto);
         buttonReset.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -143,8 +150,12 @@ public class Loja extends AppCompatActivity implements View.OnClickListener{
         resetoTabelen();
     }
     private void nderroNumrinPikeve(){
-        textViewLojtari1.setText("Lojtari 1 : " + lojtari1Piket);
-        textViewLojtari2.setText("Lojtari 2 : "+lojtari2Piket);
+        Intent intent = getIntent();
+        String strlojtari1 = intent.getStringExtra("lojtari1");
+        String strlojtari2 = intent.getStringExtra("lojtari2");
+        
+        textViewLojtari1.setText(strlojtari1 + ": " + lojtari1Piket);
+        textViewLojtari2.setText(strlojtari2 + ": " + lojtari2Piket);
     }
     private void resetoTabelen(){
         for(int i=0;i<3;i++){

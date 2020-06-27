@@ -19,7 +19,7 @@
         />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/lojt2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -55,6 +55,7 @@
         android:layout_marginRight="94dp"
         android:layout_marginBottom="299dp"
         android:text="Lojtari 2"
+        android:textColor="#020202"
         android:textSize="20sp" />
 
     <TextView
@@ -74,10 +75,11 @@
         android:layout_marginRight="96dp"
         android:layout_marginBottom="455dp"
         android:text="Lojtari 1"
+        android:textColor="#090909"
         android:textSize="20sp" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/lojt1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -98,17 +100,34 @@
 
     <Button
         android:id="@+id/btnLuaj"
-        android:layout_width="158dp"
-        android:layout_height="79dp"
+        android:layout_width="221dp"
+        android:layout_height="51dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="39dp"
-        android:layout_marginRight="39dp"
-        android:layout_marginBottom="129dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginRight="94dp"
+        android:layout_marginBottom="165dp"
         android:background="@drawable/luajbackground"
         android:onClick="OPEN"
         android:text="Luaj"
         android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/dilni"
+        android:layout_width="104dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="279dp"
+        android:layout_marginLeft="279dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="100dp"
+        android:text="Dilni"
+        android:textSize="17sp" />
 
 </RelativeLayout>
