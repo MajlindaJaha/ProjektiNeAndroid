@@ -20,4 +20,10 @@ Quhej "terni lapilli" (tre guralecë në të njëjtën kohë) secili lojtar kish
     <string name="Mesazhi" />
     <string name="ZmadhoTekstin">Zmadho Tekstin</string>
     <string name="text">text</string>
+    <string name="luaj">Luaj</string>
+    <string name="lojtari_i_dyte">Lojtari i dyte</string>
+    <string name="lojtari_i_pare">Lojtari i pare</string>
+    <string name="sign_out">SIGN OUT</string>
+    <string name="register">REGISTER</string>
+    <string name="choose_image">Choose Image</string>
 </resources>

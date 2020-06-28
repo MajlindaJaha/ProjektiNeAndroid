@@ -1,14 +1,19 @@
 package com.fiek.projektineandroid;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,9 +22,16 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.gun0912.tedpermission.PermissionListener;
+import com.gun0912.tedpermission.TedPermission;
+
+import java.util.List;
 
 
 public class RegjistrohuActivity extends AppCompatActivity {
+
+    ImageView mimagewiew;
+    Button chooseBtn;
 
     private TextView loginLink;
     private Button regjistroButon;
@@ -27,10 +39,39 @@ public class RegjistrohuActivity extends AppCompatActivity {
     private String  email, password;
     private FirebaseAuth firebaseAuth;
 
+    private static final int IMAGE_PICK_CODE = 1000;
+    private static final int PERMISSION_CODE = 1001;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_regjistrohu);
+
+        mimagewiew = findViewById(R.id.image_view);
+        chooseBtn = findViewById(R.id.choose_photo);
+
+        chooseBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+                    if(checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
+                            == PackageManager.PERMISSION_DENIED){
+                        String[] permissions = {Manifest.permission.READ_EXTERNAL_STORAGE};
+                        requestPermissions(permissions,PERMISSION_CODE);
+                    }
+                    else{
+
+                        pickImageFromGallery();
+                    }
+                }
+                else{
+                    pickImageFromGallery();
+                }
+            }
+
+
+        });
+
         regjistroButon = findViewById(R.id.regjistrohuButton);
 
         emailEditText = findViewById(R.id.email);
@@ -83,4 +124,37 @@ public class RegjistrohuActivity extends AppCompatActivity {
             }
         });
     }
+    private void pickImageFromGallery() {
+        Intent intent = new Intent(Intent.ACTION_PICK);
+        intent.setType("image/*");
+        startActivityForResult(intent, IMAGE_PICK_CODE);
+
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        switch (requestCode){
+            case PERMISSION_CODE:{
+                if(grantResults.length >0 && grantResults[0]==
+                PackageManager.PERMISSION_GRANTED){
+                    pickImageFromGallery();
+                }
+                else {
+                    Toast.makeText(this,"Permission denied..!",Toast.LENGTH_SHORT).show();
+                }
+            }
+
+        }
+
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK && requestCode == IMAGE_PICK_CODE) {
+            mimagewiew.setImageURI(data.getData());
+        }
+    }
 }
+

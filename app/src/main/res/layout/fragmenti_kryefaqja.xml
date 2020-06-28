@@ -33,11 +33,11 @@
             android:layout_width="250dp"
             android:layout_height="40dp"
             android:layout_marginTop="220dp"
-            android:layout_marginLeft="40dp"
-            android:paddingLeft="15dp"
+            android:layout_centerHorizontal="true"
             android:background="@drawable/loginbtn"
             android:inputType="textPersonName"
-            android:hint="Lojtari i pare"
+            android:hint="@string/lojtari_i_pare"
+            android:paddingLeft="15dp"
             android:textSize="20sp"
             android:textColor="#000"
             android:textColorHint="#000"/>
@@ -48,27 +48,28 @@
         android:layout_width="250dp"
         android:layout_height="40dp"
         android:layout_marginTop="280dp"
-        android:layout_marginLeft="40dp"
-        android:paddingLeft="15dp"
+        android:layout_centerHorizontal="true"
         android:background="@drawable/loginbtn"
-
         android:inputType="textPersonName"
-        android:hint="Lojtari i dyte"
+        android:hint="@string/lojtari_i_dyte"
+        android:paddingLeft="15dp"
         android:textSize="20sp"
         android:textColor="#000"
         android:textColorHint="#000"
+        app:layout_constraintHorizontal_bias="0.484"
         />
 
     <Button
         android:id="@+id/btnLuaj"
         android:layout_width="250dp"
         android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="370dp"
-        android:layout_marginLeft="40dp"
         android:background="@drawable/email"
-        android:text="Luaj"
+        android:text="@string/luaj"
         android:textColor="#fff"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        app:layout_constraintHorizontal_bias="0.484" />
 
         <View
             android:layout_width="fill_parent"
@@ -81,10 +82,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="470dp"
-        android:layout_marginLeft="110dp"
-        android:text="SIGN OUT"
+        android:layout_centerHorizontal="true"
+        android:text="@string/sign_out"
         android:textSize="22sp"
-        android:textColor="#032b5f"/>
+        android:textColor="#032b5f" />
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

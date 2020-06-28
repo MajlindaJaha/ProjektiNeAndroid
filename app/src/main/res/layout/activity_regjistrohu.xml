@@ -20,16 +20,27 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="REGISTER"
-            android:textSize="46dp"
+            android:text="@string/register"
+            android:textSize="46sp"
             android:textColor="#fff"
             app:layout_constraintHorizontal_bias="0.476" />
+
+        <ImageView
+            android:layout_marginTop="40dp"
+            android:id="@+id/image_view"
+            android:scaleType="centerCrop"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src = "@drawable/ic_image_black_24dp"
+            />
+
+
 
         <EditText
             android:id="@+id/email"
             android:layout_width="250dp"
             android:layout_height="40dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="40dp"
             android:paddingLeft="15dp"
             android:ems="10"
             android:hint="Email"
@@ -67,6 +78,20 @@
             app:layout_constraintHorizontal_bias="0.47"
             app:layout_constraintVertical_bias="0.0" />
 
+
+        <Button
+            android:id="@+id/choose_photo"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/choose_image"
+            android:background="@drawable/loginbtn"
+            android:shadowDx="0.2"
+            android:shadowDy="0.2"
+            android:shadowColor="#06558d"
+            android:textColor="#06558d"
+            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintVertical_bias="0.0" />
         <View
             android:layout_width="fill_parent"
             android:layout_height="2dp"
