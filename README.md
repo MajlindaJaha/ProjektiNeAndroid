@@ -15,6 +15,7 @@ X O O   O X O   O O X   O O O   O O O   X X X   O O X   X O O
 ```
 
 ## Disa foto se si duhet të regjistroheni dhe të luani.
+![readme1](https://user-images.githubusercontent.com/44606115/86293872-c680d380-bbf3-11ea-98e5-6da42023b617.jpg)
 
 
 
