@@ -35,12 +35,14 @@ public class RegjistrohuActivity extends AppCompatActivity {
 
     private TextView loginLink;
     private Button regjistroButon;
+    private Button ruajNeDatabasze;
     private EditText emailEditText, passwordEditText;
-    private String  email, password;
+    private String email, password;
     private FirebaseAuth firebaseAuth;
 
     private static final int IMAGE_PICK_CODE = 1000;
     private static final int PERMISSION_CODE = 1001;
+    DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +51,8 @@ public class RegjistrohuActivity extends AppCompatActivity {
 
         mimagewiew = findViewById(R.id.image_view);
         chooseBtn = findViewById(R.id.choose_photo);
+
+
 
         chooseBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,6 +81,34 @@ public class RegjistrohuActivity extends AppCompatActivity {
         emailEditText = findViewById(R.id.email);
         passwordEditText = findViewById(R.id.password);
         loginLink = findViewById(R.id.loginlink);
+
+        ruajNeDatabasze = findViewById(R.id.ruajNeDatabaze);
+        db = new DatabaseHelper(this);
+
+        ruajNeDatabasze.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String s1 = emailEditText.getText().toString();
+                String s2 = passwordEditText.getText().toString();
+
+                if(s1.equals("") || s2.equals("")){
+                    Toast.makeText(getApplicationContext(), "Mbush te dhenat",Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Boolean chkemail = db.chkemail(s1);
+                    if(chkemail==true){
+                        Boolean insert = db.insert(s1,s2);
+                        if(insert==true){
+                                Toast.makeText(getApplicationContext(),"Te dhenat u ruajten me sukses", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                    else {
+                        Toast.makeText(getApplicationContext(),"Emaili tashme ekziston",Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+            }
+        });
 
         firebaseAuth  = FirebaseAuth.getInstance();
 
