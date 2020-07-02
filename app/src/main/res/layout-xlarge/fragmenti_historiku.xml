@@ -12,7 +12,7 @@
         android:id="@+id/TicTacToe"
         android:textColor="@android:color/white"
         android:text="@string/Tic_Tac_Toe"
-        android:textSize="50sp"
+        android:textSize="80sp"
         android:textAlignment="center"
         android:gravity="center_horizontal"
         android:textStyle="bold"
@@ -26,7 +26,7 @@
         android:text="@string/historiku"
         android:textStyle="bold"
         android:textAlignment="center"
-        android:textSize="30sp"
+        android:textSize="50sp"
         android:textColor="#032b5f"
         android:gravity="center_horizontal" />
 
@@ -47,27 +47,27 @@
                 android:padding="@android:dimen/app_icon_size"
                 android:text="@string/paragrafi"
                 android:textColor="#fff"
-                android:textSize="14sp" />
+                android:textSize="30sp" />
 
         </ScrollView>
 
         <Button
             android:id="@+id/btn_zmadho"
-            android:layout_width="200dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="550sp"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="900sp"
             android:textColor="#fff"
             android:background="#032b5f"
             android:text="@string/ZmadhoTekstin"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="70dp"
             android:textSize="20sp"/>
 
         <Button
             android:id="@+id/btn_toast"
-            android:layout_width="150dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="550sp"
-            android:layout_marginLeft="220sp"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="900sp"
+            android:layout_marginLeft="450sp"
             android:textSize="20sp"
             android:textColor="#fff"
             android:layout_marginBottom="10dp"
